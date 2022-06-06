@@ -1,0 +1,766 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    background-color: #b6b3b3;
+    font-family: 'Josefin Sans', sans-serif;  
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    background-color: #3a3a3a;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    width: 100%;
+} 
+
+main {
+    display: block;
+    height: 100vh;
+    position: relative;
+}
+
+.nav-bar {
+    background-color: #3a3a3a;
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.bar-btn {
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.nav-menu {
+    position: fixed;
+    width: 100%;
+    height: 0;
+    top: 50px;
+    background-color: rgba(0, 0 , 0, 0.9);
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.nav-menu li {
+    display: none;
+    line-height: 30px;
+    margin: 60px 0;
+    transition: all 0.5s;
+}
+
+.nav-menu li a {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav-menu li a.active, .nav-menu li a:hover {
+    color: hsl(197, 96%, 39%);
+    transition: 0.3s;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .nav-menu {
+    height: 95vh;
+    z-index: 4;
+}
+
+#check:checked ~.nav-menu li {
+    display: block;
+}
+
+.portal {
+    height: 150px;
+    overflow: hidden;
+
+}
+
+.cont-avat {
+    margin: 0 auto;
+    padding: 15px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.avatar, .titulo, .aoresentacao {
+    grid-column: span 2;
+}
+
+.avatar {
+    position: relative;
+    top: -100px;
+    margin: 0 auto;
+    height: 150px;
+    width: 150px;
+    justify-content: space-around;
+}
+
+.avatar-pic {
+    background-color: aqua;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.avatar-1 {
+    background-color: aqua;
+    height: 70px;
+    width: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-left: 5%;
+}
+
+.redes {
+    position: relative;
+    top: 15%;
+    left: 35%;
+}
+
+
+.contact-red {
+    position: relative;
+    bottom: -75px;
+}
+
+.avat-r1, .avat-r2, .avat-r3, .avat-rw, .avat-rf, .avat-ri {
+    background-color: #b6b3b3;
+    border-radius: 50%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width:  50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.pic-re {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.avat-r1  {
+    left: 35px;
+}
+
+.avat-r2 {
+    left: calc(50% - 130px);
+}
+
+.avat-r3 {
+    right: 20px;
+}
+
+.pic {
+    object-fit: cover;
+    height: 100%;
+    max-width: 100%;
+}
+
+.titulo {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    font-size: 45px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.profession {
+    display: block;
+    font-size: 20px;
+}
+
+.apresentacao {
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+#formacao {
+    background-color: #DEDEDE;
+    display: block;
+    height: auto;
+    padding: 15px;
+}
+
+#projetos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+.sobre, .projects, .contato {
+    margin: auto;
+    width: 80%;
+}
+
+
+.sobre h2, .projects h2, .contato h2, .apresentacao h2 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 75px;
+    margin-left: 20px;
+}
+
+.project {
+    margin-bottom: 50px;
+            background-color: #fff;
+}
+
+#contact {
+    background: rgb(70, 67, 67);
+    color: #0c0c0c;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+
+.formulario__label {
+    display: block;
+    font-weight: 700;
+    padding: 10PX;
+    font-size: 20px;
+    cursor: pointer;
+
+    }
+    
+.formulario__grupo-input {
+    position: relative;
+}
+
+.formulario__input {
+    width: 85%;
+    background-color: #fff;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 45px;
+    font-size: 1em;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+    transition: .3 ease all;
+}
+    
+.formulario__input:focus {
+    border: 3px solid #0075ff;
+    outline: none;
+    box-shadow: 3px 0 30px rgba(163, 163, 163, 0.4);
+}
+
+.formulario__input-erro {
+    font-size: 15px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    display: none;
+}
+
+.formulario__input-erro-ativo {
+    display: block;
+}
+    
+.formulario__validacao-estado {
+    position: absolute;
+    right: 5%;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 1.5em;
+    opacity: 0;
+}
+
+.formulario__checkbox {
+    margin-right: 10px;
+}
+
+
+.formulario__grupo-redes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20%;
+    margin-bottom: 5%;
+    position: relative;
+    width: 90%;
+}
+    
+.inf_contato p {
+    font-size: 17px;
+    line-height: 45px;
+}
+
+.formulario__completo {
+    height: 45px;
+    line-height: 45px;
+    background: #e23b3b;
+    color: #000;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+    margin-top: 15px;
+    font-size: 100%;
+    width: 100%;
+}
+    
+.formulario__completo-ativo {
+    display: block;
+}
+
+.formulario__completo p {
+    margin: 0;
+}
+
+.formulario__grupo-btn-enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15%;
+}
+    
+.formulario__btn {
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    background: rgb(46, 46, 46);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1 ease all;
+}
+
+.formulario__btn:hover {
+    box-shadow: 3px 0 30px rgba(103, 103, 103, 1);
+}
+
+.formulario__mensagem-exito {
+    font-size: 1.25em;
+    color: #119200;
+    display: none;
+    margin-top: 15px;
+}
+    
+.formulario__mensaje-exito-ativo {
+    display: block;
+}
+
+.formulario__grupo-correto .formulario__validacao-estado {
+    color: #0f8319;
+    opacity: 1;
+}
+
+.formulario__grupo-incorreto .formulario__label {
+    color: #da3434;
+}
+
+.formulario__grupo-incorreto .formulario__validacao-estado {
+    color: #bb2929;
+    opacity: 1;
+}
+
+.formulario__grupo-incorreto .formulario__input {
+    border: 3px solid #bb2929;
+}
+
+
+.info {
+    margin: 15px 20px;
+    position: relative;
+    display: flex;
+}
+.info-all {
+    margin-left: 10px;
+}
+
+.inf1, .inf3 {
+    font-size: 0.5em;
+    font-weight: 400;
+}
+ .inf2 {
+     font-size: 1em;
+     font-weight: 800;
+ }
+ .inf3 {
+    margin-bottom: 5%;
+ }
+
+.agrup {
+    background-color: #000;
+    content: '';
+    width: 5px;
+    display: inline-block;
+    width: 5px;
+    height: 80%;
+    top: 0;
+    position: absolute;
+    border-radius: 15%;
+    margin-right: 30px;
+}
+
+#sobre-t {
+    background-color: #3a3a3a;
+    color: #b6b3b3;
+    height: auto;
+    padding: 15px;
+}
+
+#sobre-t .agrup{
+    background-color: #ffffff;
+}
+
+.carta {
+    background-color: rgb(212, 196, 196);
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    margin: 0 auto 15px;
+    border-radius: 5px;
+    box-shadow: rgb(0 0 0 / 24%) 0px 5px 10px;
+}
+
+.project {
+    height: auto;
+    padding: 15px;
+}
+
+.img_card {
+    max-width: 90%;
+    max-height: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.img_card img {
+    margin-top: 20px;
+}
+
+#orden{
+    max-width: 100%;
+}
+
+
+.btn {
+    background-color: #3a3a3a;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    color: #fff;   
+    font-weight: 400;
+    padding: 10px;
+    text-transform: uppercase;
+    width: 35%;
+}
+
+.btn-btn {
+    background-color: #3a3a3a;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+    padding: 10px;
+    width: 50%;
+    margin-left: 25%;
+    text-transform: uppercase;
+}
+
+.btn-block {
+    display: flex;
+    justify-content: space-around;
+    margin-top: auto;
+    
+}
+
+.btn-block a {
+    text-align: center;
+    font-size: 100%;
+}
+
+.intern {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    width: 90%;
+}
+
+.intern h3 {
+    font-size: 1.5em;
+    font-weight: 800;
+    line-height: 50px;
+}
+
+.intern p {
+    font-size: 1em;
+    font-weight: 400;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 160px;
+    width: 80%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+@media screen and (min-width: 480px) {
+    header {
+        width: 100%;
+        height: 75px;
+    } 
+
+    .pic-1 {        
+        width: 140px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .bar-btn {
+        font-size: 45px;
+        color: #fff;
+        cursor: pointer;
+        margin-right: 5%;
+    }
+
+    .nav-menu {
+        top: 75px;
+    }
+}
+
+@media screen and (min-width: 620px) {
+
+    .presentacion {
+        width: 60%;
+    }
+
+    .sobre, .projects, .contato {
+        margin: auto;
+        width: 60%;
+    }
+}
+
+    
+@media screen and (max-width: 680px) {
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario__grupo-terminos,
+    .formulario__mensaje,
+    .formulario__grupo-btn-enviar {
+        grid-column: 1;
+    }
+
+    .formulario__btn {
+        width: 100%;
+    }
+}
+    
+@media screen and (min-width: 760px) {
+    header {
+        width: 100%;
+    } 
+
+    .nav-bar {
+        width: 90%;
+    }
+
+    .pic-1 {     
+        width: 140px;
+        margin-left: 25px;
+        margin-top: 10px;
+    }
+    .bar-btn {
+        display: none;
+    }
+
+    .nav-menu {
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 50px;
+    }
+
+    .nav-menu li {
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+    }
+
+    .nav-menu li a {
+        font-size: 12px;
+    }
+
+    .sobre, .projects, .contato {
+        margin: auto;
+        width: 70%;
+    }
+
+    #project {
+        display: inline-flex;
+        flex-direction: column;
+
+
+    }
+
+    .carta {
+        display: inline;
+        float: left;
+    }
+    
+    .img_card img {
+        margin-top: 0px;
+    }
+    
+    .grande {
+        width: auto;
+        margin: 10px 2%;
+    }
+    /* Formulario de contato */
+    
+    .formulario {
+        grid-template-columns: 1fr 1fr;
+    } 
+    /* fin promuelario de contato */
+}
+
+
+@media screen and (min-width: 1000px) {
+
+    .formulario__grupo-terminos,
+    .formulario__completo,
+    .formulario__grupo-btn-enviar,
+    .formulario__grupo-redes,
+    .formulario h2,
+    .inf_contato  {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+
+    .apresentacao {
+        width: 40%;
+        margin-top: -10%;
+        margin-left: 48%;
+    }
+
+    .grande {
+        width: 32%;
+        margin: 0.5% 0.5% 0.5%;
+    }
+
+    .portal {
+        height: 225px;
+    }
+
+    #contato {
+        display: inline-flex;
+        flex-direction: column;
+
+    }
+    
+    #contact {
+        height: auto;
+    }
+
+    .avatar {
+        margin-left: 25%;
+        height: 250px;
+        width: 250px;
+        
+    }
+
+    .avat-r1  {
+        left: 50px;
+    }
+
+
+    .formulario__grupo-redes {
+        width: 75%;
+    }
+
+    .inf1, .inf3 {
+        font-size: 0.75em;
+    }
+
+     .inf2 {
+         font-size: 1.25em;
+     }
+
+     .titulo {
+        top: -180px;
+        width: 50%;
+        margin-left: 40%;
+    }
+
+    .name {
+        font-size: 4.5em;
+    }
+
+    .avat-r1, .avat-r2, .avat-r3, .avat-rw, .avat-rf, .avat-ri {
+        width:  75px;
+        height: 75px;
+    
+    }
+
+    .avat-r1 {
+        left: -50px;
+    }
+
+    .avat-r2 {
+        left: calc(50% - 75px);
+    }
+
+    .avat-r3 {
+        right: 25px;
+    }
+}
+
+/*
